@@ -2,21 +2,20 @@ import { EnergyReading, DailyStats, PlantStatus } from '@/types/energy';
 
 export class EnergyDataSimulator {
   private generateSolarOutput(hour: number): number {
-    // no sun at night obviously
     if (hour < 6 || hour > 18) return 0;
     
     const peakHour = 12;
     const maxOutput = 150;
     const hourOffset = Math.abs(hour - peakHour);
     const efficiency = Math.max(0, 1 - (hourOffset / 6));
-    const cloudFactor = 0.8 + (Math.random() * 0.4); // random cloud cover
+    const cloudFactor = 0.8 + (Math.random() * 0.4);
     
     return Math.round(maxOutput * efficiency * cloudFactor);
   }
 
   private generateWindOutput(): number {
     const baseOutput = 80;
-    const variability = 0.6 + (Math.random() * 0.8); // wind is unpredictable 
+    const variability = 0.6 + (Math.random() * 0.8);
     
     return Math.round(baseOutput * variability);
   }

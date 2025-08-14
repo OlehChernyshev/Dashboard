@@ -14,7 +14,7 @@ export interface DailyStats {
 
 export type EnergySource = 'solar' | 'wind' | 'battery' | 'total';
 
-interface PlantStatus {
+export interface PlantStatus {
   isOnline: boolean;
   lastUpdate: string;
   currentOutput: number;
