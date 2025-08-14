@@ -1,7 +1,7 @@
 # Energy Dashboard
 
-Just a quick dashboard i built to track energy stuff. works pretty well.
+A simple web dashboard for monitoring renewable energy sources.
 
-shows solar, wind and battery data with some charts. has dark mode too.
+Displays real-time data for solar panels, wind turbines, and battery storage with interactive charts and metrics.
 
-built with nextjs and typescript.
+Built with Next.js and TypeScript.
